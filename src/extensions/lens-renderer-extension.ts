@@ -4,11 +4,11 @@ import { AppPreferenceRegistry } from "./app-preference-registry";
 
 export class LensRendererExtension extends LensExtension {
 
-  registerPages(pageStore: PageRegistry) {
+  registerPages(registry: PageRegistry) {
     return
   }
 
-  registerAppPreferences(appPreferenceStore: AppPreferenceRegistry) {
+  registerAppPreferences(registry: AppPreferenceRegistry) {
     return
   }
 }

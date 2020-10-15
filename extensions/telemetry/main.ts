@@ -6,7 +6,7 @@ export default class TelemetryMainExtension extends LensMainExtension {
 
   async onActivate() {
     console.log("telemetry main extension activated")
-    this.preferencesStore = TelemetryPreferencesStore.getInstance<TelemetryPreferencesStore>()
+    this.preferencesStore = TelemetryPreferencesStore.getInstance()
     await this.preferencesStore.load()
   }
 

@@ -18,7 +18,6 @@ module.exports = [
     externals: [
       {
         "@lens/extensions": "var global.LensExtensions",
-        "react": "var global.React",
         "mobx": "var global.Mobx"
       }
     ],

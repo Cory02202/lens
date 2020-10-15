@@ -18,6 +18,7 @@ export default function (): webpack.Configuration {
     },
     output: {
       libraryTarget: "global",
+      globalObject: "global",
       path: buildDir,
     },
     resolve: {

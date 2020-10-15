@@ -115,7 +115,6 @@ export class Preferences extends React.Component {
 
   render() {
     const { preferences } = userStore;
-    const extensionPreferences = appPreferenceRegistry.preferences
     const header = (
       <>
         <h2>Preferences</h2>
@@ -187,9 +186,9 @@ export class Preferences extends React.Component {
             <Trans>Does not affect cluster communications!</Trans>
           </small>
 
-          {extensionPreferences.map(({title, components: { Hint, Input}}) => {
+          {appPreferenceRegistry.preferences.map(({title, components: { Hint, Input}}, index) => {
             return (
-              <div key={title}>
+              <div className="lens-extension-preference" key={index}>
                 <h2>{title}</h2>
                 <Input />
                 <small className="hint">

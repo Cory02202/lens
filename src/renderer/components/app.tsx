@@ -39,7 +39,7 @@ import { webFrame } from "electron";
 import { pageRegistry } from "../../extensions/page-registry";
 import { DynamicPage } from "../../extensions/dynamic-page";
 import { extensionLoader } from "../../extensions/extension-loader";
-import { getLensRuntime } from "../../extensions/lens-runtime";
+import { getLensRendererRuntime } from "../../extensions/lens-renderer-runtime";
 
 @observer
 export class App extends React.Component {
@@ -51,7 +51,7 @@ export class App extends React.Component {
 
     await clusterIpc.setFrameId.invokeFromRenderer(clusterId, frameId);
     await getHostedCluster().whenReady; // cluster.activate() is done at this point
-    extensionLoader.loadOnClusterRenderer(getLensRuntime)
+    extensionLoader.loadOnClusterRenderer(getLensRendererRuntime)
   }
 
   get startURL() {

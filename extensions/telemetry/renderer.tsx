@@ -8,7 +8,7 @@ export default class TelemetryRendererExtension extends LensRendererExtension {
 
   async onActivate() {
     console.log("telemetry extension activated")
-    this.preferencesStore = TelemetryPreferencesStore.getInstance<TelemetryPreferencesStore>()
+    this.preferencesStore = TelemetryPreferencesStore.getInstance()
     await this.preferencesStore.load()
   }
 
