@@ -27,7 +27,6 @@ export function webpackLensRenderer({ showVars = true } = {}): webpack.Configura
     },
     output: {
       libraryTarget: "global",
-      globalObject: "this",
       publicPath: publicPath,
       path: buildDir,
       filename: '[name].js',

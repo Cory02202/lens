@@ -25,8 +25,7 @@ module.exports = [
       extensions: [ '.tsx', '.ts', '.js' ],
     },
     output: {
-      libraryTarget: "commonjs2",
-      globalObject: "this",
+      libraryTarget: "umd",
       filename: 'main.js',
       path: path.resolve(__dirname, 'dist'),
     },
@@ -57,8 +56,7 @@ module.exports = [
       extensions: [ '.tsx', '.ts', '.js' ],
     },
     output: {
-      libraryTarget: "commonjs2",
-      globalObject: "this",
+      libraryTarget: "umd",
       filename: 'renderer.js',
       path: path.resolve(__dirname, 'dist'),
     },
